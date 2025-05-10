@@ -1,6 +1,11 @@
+import Logo from "./Logo";
+
 const Footer = () => {
     return ( 
-        <h1>Footer</h1>
+        <div className="bg-black text-white">
+            <Logo color= '#FFFFFF'/>
+            <h1>Footer</h1>
+        </div>
      );
 }
  

@@ -4,13 +4,15 @@ import Footer from "../components/Footer";
 
 const PageLayout = () => {
     return ( 
-        <>
-        <Header />
-        <main>
-            <Outlet />
-        </main>
-        <Footer />
-        </>
+        <div>
+            <div>
+                <Header />
+                <main>
+                    <Outlet />
+                </main>
+                <Footer />
+            </div>
+        </div>
      );
 }
  
