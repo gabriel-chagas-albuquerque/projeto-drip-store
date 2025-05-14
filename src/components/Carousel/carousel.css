@@ -1,0 +1,51 @@
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+
+.slick-dots {
+    position: static;
+}
+
+.slick-dots ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    
+}
+
+.slick-dots li {
+    gap: 10px;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: 1;
+    color: #CCCCCC;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    color:#C92071;
+}

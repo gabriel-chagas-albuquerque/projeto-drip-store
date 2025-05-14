@@ -5,13 +5,11 @@ import Footer from "../components/Footer";
 const PageLayout = () => {
     return ( 
         <div>
-            <div>
-                <Header />
-                <main>
-                    <Outlet />
-                </main>
-                <Footer />
-            </div>
+            <Header />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
         </div>
      );
 }
