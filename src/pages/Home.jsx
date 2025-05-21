@@ -1,8 +1,12 @@
 import Banner from "../components/Banner";
+import ProductsList from "../components/ProductsHigh";
 
 const Home = () => {
     return ( 
-        <Banner />
+        <div>
+            <Banner />
+            <ProductsList />
+        </div>
      );
 }
  
