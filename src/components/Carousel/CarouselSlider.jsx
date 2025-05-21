@@ -39,11 +39,14 @@ const CarouselSlider = () => {
       src: "./home-slide-8.jpeg",
     },
   ];
+  const tamanhoTela = window.screen.width
+  const draggable = tamanhoTela > 765 ? false : true
   const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
     autoplay: true,
+    draggable: draggable,
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -51,12 +54,12 @@ const CarouselSlider = () => {
     dotsClass: "slick-dots static",
     appendDots: (dots) => (
       <div>
-        <ul> {dots} </ul>
+        <ul className="w-full"> {dots} </ul>
       </div>
     ),
   };
   return (
-    <div className="slider-container w-screen">
+    <div className="slider-container w-full ">
       <Slider {...settings}>
         {imagesCarousel.map((imageCarousel) => {
           return (

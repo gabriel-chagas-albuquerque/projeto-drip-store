@@ -3,7 +3,7 @@ import AppRoutes from './routes/Routes'
 
 function App() {
   return (
-    <div>
+    <div className='flex justify-center'>
       <AppRoutes />
     </div>
   )
