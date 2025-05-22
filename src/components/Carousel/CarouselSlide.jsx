@@ -2,9 +2,9 @@ import Button from "../Button";
 
 const CarouselSlide = ({ id, src }) => {
   return (
-    <div className="flex flex-col justify-center px-3 lg:flex-row-reverse">
-      <img src={src} alt={`Imagem ${id}`} className="w-[50%]" />
-      <div className="flex flex-col items-center justify-center mt-[20px] w-[50%]">
+    <div className="flex flex-col justify-center items-center px-3 lg:flex-row-reverse">
+      <img src={src} alt={`Imagem ${id}`} className="lg:w-[50%]" />
+      <div className="flex flex-col items-center justify-center mt-[20px] lg:w-[50%]">
         <p className="text-sm leading-[22px] tracking-[0.75px] text-[#C92071] font-bold lg:text-[#F6AA1C]">
           Melhores ofertas personalizadas
         </p>
