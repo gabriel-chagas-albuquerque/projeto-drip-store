@@ -8,36 +8,20 @@ const CarouselSlider = () => {
   const imagesCarousel = [
     {
       id: 1,
-      src: "./home-slide-1.jpeg",
+      src: "./home-slide.png",
     },
     {
       id: 2,
-      src: "./home-slide-2.jpeg",
+      src: "./home-slide.png",
     },
     {
       id: 3,
-      src: "./home-slide-3.jpeg",
+      src: "./home-slide.png",
     },
     {
       id: 4,
-      src: "./home-slide-4.jpeg",
-    },
-    {
-      id: 5,
-      src: "./home-slide-5.jpeg",
-    },
-    {
-      id: 6,
-      src: "./home-slide-6.jpeg",
-    },
-    {
-      id: 7,
-      src: "./home-slide-7.jpeg",
-    },
-    {
-      id: 8,
-      src: "./home-slide-8.jpeg",
-    },
+      src: "./home-slide.png",
+    }
   ];
   const tamanhoTela = window.screen.width
   const draggable = tamanhoTela > 765 ? false : true
