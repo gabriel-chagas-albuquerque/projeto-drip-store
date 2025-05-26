@@ -43,7 +43,7 @@ const CarouselSlider = () => {
     ),
   };
   return (
-    <div className="slider-container w-full ">
+    <div className="slider-container w-full bg-[#F5F5F5] pb-[53px] ">
       <Slider {...settings}>
         {imagesCarousel.map((imageCarousel) => {
           return (
