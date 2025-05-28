@@ -1,6 +1,12 @@
+import Banner from "../components/Banner";
+import ProductsList from "../components/ProductsHigh";
+
 const Home = () => {
     return ( 
-        <h1>Home</h1>
+        <div>
+            <Banner />
+            <ProductsList />
+        </div>
      );
 }
  
