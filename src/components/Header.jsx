@@ -1,9 +1,6 @@
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import images from '../assets/images.jsx'
 import 'primeicons/primeicons.css';
-import { InputIcon } from 'primereact/inputicon';
-import { InputText } from 'primereact/inputtext';
-import { IconField } from 'primereact/iconfield';
 import React from 'react';
 //import '../style/header.css'
 import { PiMagnifyingGlass, PiShoppingCartSimple } from "react-icons/pi";
