@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 
 const PageLayout = () => {
     return ( 
-        <>
-        <Header />
-        <main>
-            <Outlet />
-        </main>
-        <Footer />
-        </>
+        <div className="flex flex-col justify-center h-full w-full max-w-[1440px] font-[inter]">
+            <Header />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
+        </div>
      );
 }
  
