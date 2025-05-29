@@ -1,6 +1,14 @@
+import Banner from "../components/Banner";
+import ProductsCollections from "../components/Collections/ProductsCollections";
+import ProductsList from "../components/ProductsList";
+
 const Home = () => {
     return ( 
-        <h1>Home</h1>
+        <div>
+            <Banner />
+            <ProductsCollections />
+            <ProductsList />
+        </div>
      );
 }
  

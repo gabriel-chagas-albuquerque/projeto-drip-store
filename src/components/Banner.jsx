@@ -1,7 +1,11 @@
+import CarouselSlider from "./Carousel/CarouselSlider";
+
 const Banner = () => {
-    return ( 
-        <h1>Banner</h1>
-     );
-}
- 
+  return (
+    <div>
+      <CarouselSlider />  
+    </div>
+  );
+};
+
 export default Banner;
