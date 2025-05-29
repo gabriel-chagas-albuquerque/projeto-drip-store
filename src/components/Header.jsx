@@ -16,7 +16,7 @@ const Header = () => {
     <> 
      {/* menu lateral */}
      {menuOpen && (
-<div className='fixed top-0 left-0 w-full h-full bg-gray-200 bg-opacity-50 z-40 lg:hidden'
+<div className='fixed top-0 left-0 w-full h-full bg-opacity-50 z-50 lg:hidden'
   onClick={() =>  setMenuOpen(false)}/>
      )}
      <header className='w-full border-b border-gray-100 font-sans bg-white relative z-50'>
@@ -99,10 +99,10 @@ const Header = () => {
       </nav>
 
      </aside>
-      
+     
     
     </>
    );
 }
- 
+
 export default Header;
