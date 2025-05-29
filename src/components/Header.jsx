@@ -9,7 +9,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 
 
-const MobileHeader = () => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false) //Estado do menu lateral aberto ou fechado
   const [Pesquisar, setPesquisar] = useState(false) //Estado da barra de pesquisa visível ou oculta
   return ( 
@@ -105,4 +105,4 @@ const MobileHeader = () => {
    );
 }
  
-export default MobileHeader;
+export default Header;
