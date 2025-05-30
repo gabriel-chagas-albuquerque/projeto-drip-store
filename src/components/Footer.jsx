@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-zinc-900 text-white py-12 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
-        <div clas>
+        <div>
           <Logo
             color="#FFFFFF"
             classStyles="w-[170px] h-[30px] sm:w-[253px] h-[44px]"

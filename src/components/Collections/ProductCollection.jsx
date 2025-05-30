@@ -1,7 +1,6 @@
 import Button from "../Button";
 
 const ProductCollection = ({src, alt}) => {
-    console.log('Chegou!');
     
     return ( 
         <li className="relative mt-[10px]">
