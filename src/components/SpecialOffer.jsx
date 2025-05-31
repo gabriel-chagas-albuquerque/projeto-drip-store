@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const SpecialOffer = () => {
   return (
     <section className="flex flex-col-reverse md:flex-row-reverse items-center justify-between bg-white py-12 px-6 md:px-16">
@@ -12,9 +14,10 @@ const SpecialOffer = () => {
           maxime labore obcaecati consequuntur adipisci! Ex nulla, veritatis
           quod officia rerum sed accusantium.
         </p>
-        <button className="bg-pink-600 text-white py-2 px-4 rounded hover:bg-pink-700 transition duration-300">
-          Ver Oferta
-        </button>
+        <Button
+          label="Ver Ofertas"
+          classStyles="bg-pink-600 text-white py-2 px-12 rounded hover:bg-pink-700 transition duration-300"
+        />
       </div>
 
       <div className="md:w-1/2 mb-6 md:mb-0 flex justify-center">
