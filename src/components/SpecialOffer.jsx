@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const SpecialOffer = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row-reverse items-center justify-between bg-white py-12 px-6 md:px-16">
+    <section className="flex flex-col-reverse md:flex-row-reverse items-center justify-between bg-white py-12 px-6 md:px-12">
       <div className="md:w-1/2 text-center md:text-left">
         <p className="text-pink-600 font-semibold mb-2">Oferta especial!</p>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
