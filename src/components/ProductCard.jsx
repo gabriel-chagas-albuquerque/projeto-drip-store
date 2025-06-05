@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({image, category, title, priceBefore, price}) => {
     return ( 
-        <Link to={'products/product/:id'}>
+        <Link to={'product/:id'}>
             <div className="w-[163px] md:w-[292px]">
                <img src={image} alt="Imagem produto" className="mb-[11px]" />
                <h5 className="capitalize text-xs text-[#8F8F8F] lg:text-lg">{category}</h5>

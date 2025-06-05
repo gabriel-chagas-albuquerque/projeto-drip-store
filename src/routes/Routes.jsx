@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageLayout from "../layouts/PageLayout";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
-import ProductDetails from "../components/ProductDetails";
+import ProductDetails from "../pages/ProductDetails";
 import ProductsLayout from "../layouts/ProductsLayout";
 
 const AppRoutes = () => {

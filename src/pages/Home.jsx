@@ -1,14 +1,14 @@
 import Banner from "../components/Banner";
 import ProductsCollections from "../components/Collections/ProductsCollections";
-import ProductsList from "../components/ProductsList";
+import ProductsSection from "../components/ProductsSection";
 
 const Home = () => {
     return ( 
-        <div>
+        <main>
             <Banner />
             <ProductsCollections />
-            <ProductsList />
-        </div>
+            <ProductsSection />
+        </main>
      );
 }
  
