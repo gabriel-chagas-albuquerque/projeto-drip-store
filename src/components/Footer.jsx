@@ -5,20 +5,20 @@ const Footer = () => {
   return (
     <footer className="bg-zinc-900 text-white py-12 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
-        <div clas>
+        <div>
           <Logo
             color="#FFFFFF"
             classStyles="w-[170px] h-[30px] sm:w-[253px] h-[44px]"
           />
 
-          <p className="text-sm text-zinc-300 mb-4">
+          <p className="text-sm text-zinc-300 mb-4 max-w-2xs mt-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nisi
             suscipit aspernatur veniam minima? Accusantium ipsa molestiae
             laudantium illum nemo tempora. Nesciunt accusantium tempora
             reprehenderit iusto porro cum dolore voluptas.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-8">
             <FaFacebookF className="hover:text-zinc-400 cursor-pointer" />
             <FaInstagram className="hover:text-zinc-400 cursor-pointer" />
             <FaTwitter className="hover:text-zinc-400 cursor-pointer" />
