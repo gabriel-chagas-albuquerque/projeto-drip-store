@@ -7,7 +7,7 @@ import 'primeicons/primeicons.css';
 import { Link2OffIcon, Menu, Search, ShoppingCart } from "lucide-react";
 import { FaShoppingCart } from 'react-icons/fa';
 
-
+//ola
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false) //Estado do menu lateral aberto ou fechado
