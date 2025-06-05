@@ -74,8 +74,8 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
 <nav className='hidden lg:flex gap-5 py-2.5 px-5 text-sm' >
   <Link to={'/'} className={local('/') ? ativeLinks : desativeLinks}>Home</Link>
   <Link to={'/products'} className={local('/products') ? ativeLinks : desativeLinks}>Produtos</Link>
-  <Link to={'/'} className={local('') ? ativeLinks : desativeLinks}>Categoria</Link>
-  <Link to={'/'} className={local('') ? ativeLinks : desativeLinks}>Meus Pedidos</Link>
+ <Link href='#' className="text-gray-600 no-underline relative hover:text-[#c92071] hover:text-[#c92071] hover:font-bold after::content-[''] after:absolute after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full">Categoria</Link>
+  <Link href='#' className="text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after:content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full">Meus Pedidos</Link>
 </nav>
      
 </div>
