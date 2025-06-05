@@ -52,7 +52,7 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
           </div>
           {/*botões pc e mobile */}
          <div className='hidden lg:flex items-center gap-4'>
-          <p><a href='#' className='text-gray-800 underline text-base mr-2.5'>Cadastre-se</a></p>
+          <p><Link to={''} className='text-gray-800 underline text-base mr-2.5'>Cadastre-se</Link></p>
           <button className='w-[114px] h-10 bg-[#c92071] text-white border-none py-1.5 px-4 rounded-[20px] cursor-pointer mr-5'>Entrar</button>
           <FaShoppingCart className='text-[#d60074] text-[1.4rem] cursor-pointer' />
          </div>
@@ -74,8 +74,8 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
 <nav className='hidden lg:flex gap-5 py-2.5 px-5 text-sm' >
   <Link to={'/'} className={local('/') ? ativeLinks : desativeLinks}>Home</Link>
   <Link to={'/products'} className={local('/products') ? ativeLinks : desativeLinks}>Produtos</Link>
- <Link href='#' className="text-gray-600 no-underline relative hover:text-[#c92071] hover:text-[#c92071] hover:font-bold after::content-[''] after:absolute after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full">Categoria</Link>
-  <Link href='#' className="text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after:content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full">Meus Pedidos</Link>
+ <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Categoria</Link>
+  <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Meus Pedidos</Link>
 </nav>
      
 </div>
@@ -86,16 +86,16 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
         <h3 className='text-lg font-bold text-gray-800 mb-4 font-inter'>Páginas</h3>
         <ul className='space-y-3'>
           <li>
-            <Link to={'/'} className={local('/') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link to={'/'} className={local('/') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Home</Link>
           </li>
           <li>
-            <Link to={'/products'} className={local('/products') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Produtos</Link>
+            <Link to={'/products'} className={local('/products') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Produtos</Link>
           </li>
             <li>
-             <a href='#' className='text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'>Categorias</a>
+             <Link to={''} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Categorias</Link>
           </li>
           <li>
-            <a href='#' className='text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'>Meus Pedidos</a>
+            <Link to={''} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Meus Pedidos</Link>
           </li>
         </ul>
         <div className='mt-8 space-y-0'>
