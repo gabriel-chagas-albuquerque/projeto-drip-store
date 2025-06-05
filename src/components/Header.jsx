@@ -91,14 +91,12 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
           <li>
             <Link to={'/products'} className={local('/products') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Produtos</Link>
           </li>
-          <li>
-             <Link to={'/'} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'}>Categorias
-          </Link>
+            <li>
+             <a href='#' className='text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'>Categorias</a>
           </li>
           <li>
-            <Link to={'/'} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'}>Meus Pedidos
-          </Link>
-         </li>
+            <a href='#' className='text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'>Meus Pedidos</a>
+          </li>
         </ul>
         <div className='mt-8 space-y-0'>
           <hr className='border-gray-300 mb-4'></hr>
