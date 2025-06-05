@@ -74,8 +74,8 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
 <nav className='hidden lg:flex gap-5 py-2.5 px-5 text-sm' >
   <Link to={'/'} className={local('/') ? ativeLinks : desativeLinks}>Home</Link>
   <Link to={'/products'} className={local('/products') ? ativeLinks : desativeLinks}>Produtos</Link>
-  <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Categoria</Link>
-  <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Meus Pedidos</Link>
+  <Link to={'/'} className={local('') ? ativeLinks : desativeLinks}>Categoria</Link>
+  <Link to={'/'} className={local('') ? ativeLinks : desativeLinks}>Meus Pedidos</Link>
 </nav>
      
 </div>
@@ -92,11 +92,11 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
             <Link to={'/products'} className={local('/products') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Produtos</Link>
           </li>
           <li>
-             <Link to={'/'} className={local('/categorias') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Categorias
+             <Link to={''} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Categorias
           </Link>
           </li>
           <li>
-            <Link to={'/'} className={local('/meus-pedidos') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Meus Pedidos
+            <Link to={''} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Meus Pedidos
           </Link>
          </li>
         </ul>
