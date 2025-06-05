@@ -7,19 +7,20 @@ import 'primeicons/primeicons.css';
 import { Link2OffIcon, Menu, Search, ShoppingCart } from "lucide-react";
 import { FaShoppingCart } from 'react-icons/fa';
 
-
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false) //Estado do menu lateral aberto ou fechado
   const [Pesquisar, setPesquisar] = useState(false) //Estado da barra de pesquisa visível ou oculta
-
-
-  const location = useLocation()
-const local = (path) => location.pathname === path
-const ativeLinks = "text-[#c92071] font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-[-5px] after:w-full after:h-0.5 after:bg-[#c92071]";
-const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after:content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full";
-
-
+  const location = useLocation(); // Hook para obter a localização atual
+  
+  // Função para verificar se o link está ativo
+  const isActive = (path) => location.pathname === path;
+  
+  // Classes para link ativo
+  const activeLinkClass = "text-[#c92071] font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-[-5px] after:w-full after:h-0.5 after:bg-[#c92071]";
+  
+  // Classes para link inativo
+  const inactiveLinkClass = "text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after:content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full";
+  
   return ( 
     <> 
      {/* menu lateral */}
@@ -72,46 +73,73 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
            </div>
        )}
 <nav className='hidden lg:flex gap-5 py-2.5 px-5 text-sm' >
-  <Link to={'/'} className={local('/') ? ativeLinks : desativeLinks}>Home</Link>
-  <Link to={'/products'} className={local('/products') ? ativeLinks : desativeLinks}>Produtos</Link>
-  <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Categoria</Link>
-  <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Meus Pedidos</Link>
+  <Link to={'/'} className={isActive('/') ? activeLinkClass : inactiveLinkClass}>
+    Home
+  </Link>
+  <Link to={'/products'} className={isActive('/products') ? activeLinkClass : inactiveLinkClass}>
+    Produtos
+  </Link>
+  <Link to={'/categoria'} className={isActive('/categoria') ? activeLinkClass : inactiveLinkClass}>
+    Categoria
+  </Link>
+  <Link to={'/meus-pedidos'} className={isActive('/meus-pedidos') ? activeLinkClass : inactiveLinkClass}>
+    Meus Pedidos
+  </Link>
 </nav>
      
 </div>
      </header>
-     {/* leteral*/}
+     {/* lateral */}
      <aside className={`fixed top-0 left-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 z-50 lg:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <nav className='p-6'>
         <h3 className='text-lg font-bold text-gray-800 mb-4 font-inter'>Páginas</h3>
         <ul className='space-y-3'>
           <li>
-            <Link to={'/'} className={local('/') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link 
+              to={'/'} 
+              className={isActive('/') ? activeLinkClass : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={'/products'} className={local('/products') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Produtos</Link>
+            <Link 
+              to={'/products'} 
+              className={isActive('/products') ? activeLinkClass : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}
+              onClick={() => setMenuOpen(false)}
+            >
+              Produtos
+            </Link>
           </li>
           <li>
-             <Link to={'/'} className={local('/categorias') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Categorias
-          </Link>
+            <Link 
+              to={'/categoria'} 
+              className={isActive('/categoria') ? activeLinkClass : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'}
+              onClick={() => setMenuOpen(false)}
+            >
+              Categorias
+            </Link>
           </li>
           <li>
-            <Link to={'/'} className={local('/meus-pedidos') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Meus Pedidos
-          </Link>
-         </li>
+            <Link 
+              to={'/meus-pedidos'} 
+              className={isActive('/meus-pedidos') ? activeLinkClass : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'}
+              onClick={() => setMenuOpen(false)}
+            >
+              Meus Pedidos
+            </Link>
+          </li>
         </ul>
         <div className='mt-8 space-y-0'>
           <hr className='border-gray-300 mb-4'></hr>
-          <button className='w-full  bg-[#c92071] text-white py-3 px-4 rounded-lg font-medium hover:bg[#b01d63] transition-colors mb-5 cursor-pointer'>Entrar</button>
-          <a href='#' className='block text-center text-[#c92071] font-medium underline hover:text-[#b01d63] transition-colors '>Cadastre-se</a>
+          <button className='w-full bg-[#c92071] text-white py-3 px-4 rounded-lg font-medium hover:bg[#b01d63] transition-colors'>Entrar</button>
+          <a href='#' className='block text-center text-[#c92071] font-medium underline hover:text-[#b01d63] transition-colors'>Cadastre-se</a>
         </div>
       </nav>
-
      </aside>
-     
-    
     </>
    );
 }
-
+ 
 export default Header;
