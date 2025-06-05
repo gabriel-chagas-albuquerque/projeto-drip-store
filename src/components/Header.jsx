@@ -92,11 +92,11 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
             <Link to={'/products'} className={local('/products') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Produtos</Link>
           </li>
           <li>
-             <Link to={'/'} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Categorias
+             <Link to={'/'} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'}>Categorias
           </Link>
           </li>
           <li>
-            <Link to={'/'} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'} onClick={() => setMenuOpen(false)}>Meus Pedidos
+            <Link to={'/'} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'}>Meus Pedidos
           </Link>
          </li>
         </ul>
