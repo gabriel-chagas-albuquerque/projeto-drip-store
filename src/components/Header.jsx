@@ -101,7 +101,7 @@ const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] 
         <div className='mt-8 space-y-0'>
           <hr className='border-gray-300 mb-4'></hr>
           <button className='w-full  bg-[#c92071] text-white py-3 px-4 rounded-lg font-medium hover:bg[#b01d63] transition-colors mb-5 cursor-pointer'>Entrar</button>
-          <a href='#' className='block text-center text-[#c92071] font-medium underline hover:text-[#b01d63] transition-colors '>Cadastre-se</a>
+          <Link to={''} className='block text-center text-[#c92071] font-medium underline hover:text-[#b01d63] transition-colors '>Cadastre-se</Link>
         </div>
       </nav>
 
