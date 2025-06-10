@@ -1,9 +1,10 @@
 import CarouselSlider from "./Carousel/CarouselSlider";
+import CarouselProductSlider from "./CarouselProduct/CarouselProductSlider";
 
 const Banner = () => {
   return (
     <div>
-      <CarouselSlider />  
+      <CarouselProductSlider />  
     </div>
   );
 };
