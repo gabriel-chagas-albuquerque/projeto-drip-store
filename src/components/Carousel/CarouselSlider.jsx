@@ -3,38 +3,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carousel.css"
 import CarouselSlide from "./CarouselSlide";
+import { useContext } from "react";
+import { homeSlidesContext } from "../../contexts/HomeSlidesContext";
 
-const CarouselSlider = () => {
-  const imagesCarousel = [
-    {
-      id: 1,
-      src: "./home-slide.png",
-    },
-    {
-      id: 2,
-      src: "./home-slide.png",
-    },
-    {
-      id: 3,
-      src: "./home-slide.png",
-    },
-    {
-      id: 4,
-      src: "./home-slide.png",
-    }
-  ];
+const CarouselSlider = ({dots=true, infinite=true, autoplay=true, speed=1000, autoplaySpeed=3000, arrows=false }) => {
+  
+  const imagesCarousel = useContext(homeSlidesContext)  
   const tamanhoTela = window.screen.width
   const draggable = tamanhoTela > 765 ? false : true
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    autoplay: true,
+    dots: dots,
+    infinite: infinite,
+    speed: speed,
+    autoplay: autoplay,
     draggable: draggable,
-    autoplaySpeed: 3000,
+    autoplaySpeed: autoplaySpeed,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: arrows,
     dotsClass: "slick-dots static",
     appendDots: (dots) => (
       <div>
@@ -43,9 +29,9 @@ const CarouselSlider = () => {
     ),
   };
   return (
-    <div className="slider-container w-full bg-[#F5F5F5] pb-[53px] ">
+    <div className="slider-container w-[80%] pb-[53px] m-auto">
       <Slider {...settings}>
-        {imagesCarousel.map((imageCarousel) => {
+        {imagesCarousel.homeSlides.map((imageCarousel) => {
           return (
             <CarouselSlide
               key={imageCarousel.id}

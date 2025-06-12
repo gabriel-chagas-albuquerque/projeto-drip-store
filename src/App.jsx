@@ -1,10 +1,13 @@
 import './App.css'
+import { HomeSlidesContext } from './contexts/HomeSlidesContext'
 import AppRoutes from './routes/Routes'
 
 function App() {
   return (
     <div className='flex justify-center'>
-      <AppRoutes />
+      <HomeSlidesContext>
+        <AppRoutes />
+      </HomeSlidesContext>
     </div>
   )
 }
