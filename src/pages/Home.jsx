@@ -4,11 +4,11 @@ import ProductsSection from "../components/ProductsSection";
 
 const Home = () => {
     return ( 
-        <div>
+        <main>
             <Banner />
             <ProductsCollections />
             <ProductsSection />
-        </div>
+        </main>
      );
 }
  
