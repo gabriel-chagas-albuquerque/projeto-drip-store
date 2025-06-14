@@ -2,16 +2,24 @@ import React, { useState } from 'react'
 //import '../style/HeaderMobile.css' //Estilos do cabeçalho mobile
 //import '../style/MenuMobile.css'// Estilos do menu lateral
 import images from '../assets/images.jsx' //Importação de imagens
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import 'primeicons/primeicons.css';
 import { Link2OffIcon, Menu, Search, ShoppingCart } from "lucide-react";
 import { FaShoppingCart } from 'react-icons/fa';
 
-
+//ola
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false) //Estado do menu lateral aberto ou fechado
   const [Pesquisar, setPesquisar] = useState(false) //Estado da barra de pesquisa visível ou oculta
+
+
+  const location = useLocation()
+const local = (path) => location.pathname === path
+const ativeLinks = "text-[#c92071] font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-[-5px] after:w-full after:h-0.5 after:bg-[#c92071]";
+const desativeLinks = "text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after:content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full";
+
+
   return ( 
     <> 
      {/* menu lateral */}
@@ -44,7 +52,7 @@ const Header = () => {
           </div>
           {/*botões pc e mobile */}
          <div className='hidden lg:flex items-center gap-4'>
-          <p><a href='#' className='text-gray-800 underline text-base mr-2.5'>Cadastre-se</a></p>
+          <p><Link to={''} className='text-gray-800 underline text-base mr-2.5'>Cadastre-se</Link></p>
           <button className='w-[114px] h-10 bg-[#c92071] text-white border-none py-1.5 px-4 rounded-[20px] cursor-pointer mr-5'>Entrar</button>
           <FaShoppingCart className='text-[#d60074] text-[1.4rem] cursor-pointer' />
          </div>
@@ -64,10 +72,10 @@ const Header = () => {
            </div>
        )}
 <nav className='hidden lg:flex gap-5 py-2.5 px-5 text-sm' >
-  <Link to={'/'} className="text-[#c92071] font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-[-5px] after:w-full after:h-0.5 after:bg-[#c92071]">Home</Link>
-  <Link to={'/products'} className="text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after:content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full">Produtos</Link>
-  <Link href='#' className="text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after::content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full">Categoria</Link>
-  <Link href='#' className="text-gray-600 no-underline relative hover:text-[#c92071] hover:font-bold after:content-[''] after:absolute after:left-1/2 after:bottom-[-5px] after:w-0 after:h-0.5 after:bg-[#c92071] after:transition-all after:duration-300 after:ease-in-out after:-translate-x-1/2 hover:after:w-full">Meus Pedidos</Link>
+  <Link to={'/'} className={local('/') ? ativeLinks : desativeLinks}>Home</Link>
+  <Link to={'/products'} className={local('/products') ? ativeLinks : desativeLinks}>Produtos</Link>
+ <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Categoria</Link>
+  <Link to={''} className={local('') ? ativeLinks : desativeLinks}>Meus Pedidos</Link>
 </nav>
      
 </div>
@@ -78,23 +86,22 @@ const Header = () => {
         <h3 className='text-lg font-bold text-gray-800 mb-4 font-inter'>Páginas</h3>
         <ul className='space-y-3'>
           <li>
-            <Link to={'/'} className="text-[#c92071] font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-[-5px] after:w-full after:h-0.5 after:bg-[#c92071]">Home</Link>
+            <Link to={'/'} className={local('/') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Home</Link>
           </li>
           <li>
-            <Link to={'/products'} href='#' className='text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'>Produtos</Link>
+            <Link to={'/products'} className={local('/products') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Produtos</Link>
+          </li>
+            <li>
+             <Link to={''} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Categorias</Link>
           </li>
           <li>
-             <a href='#' className='text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'>Categorias</a>
+            <Link to={''} className={local('') ? ativeLinks : 'text-gray-600 text-base block py-2 font-inter hover:text-[#c92071] transition-colors'}>Meus Pedidos</Link>
           </li>
-          <li>
-            <a href='#' className='text-gray-600 text-base block py-2 hover:text-[#c92071] transition-colors'>Meus Pedidos</a>
-          </li>
-         
         </ul>
         <div className='mt-8 space-y-0'>
           <hr className='border-gray-300 mb-4'></hr>
-          <button className='w-full bg-[#c92071] text-white py-3 px-4 rounded-lg font-medium hover:bg[#b01d63] transition-colors'>Entrar</button>
-          <a href='#' className='block text-center text-[#c92071] font-medium underline hover:text-[#b01d63] transition-colors'>Cadastre-se</a>
+          <button className='w-full  bg-[#c92071] text-white py-3 px-4 rounded-lg font-medium hover:bg[#b01d63] transition-colors mb-5 cursor-pointer'>Entrar</button>
+          <Link to={''} className='block text-center text-[#c92071] font-medium underline hover:text-[#b01d63] transition-colors '>Cadastre-se</Link>
         </div>
       </nav>
 
