@@ -18,7 +18,7 @@ const ProductsSection = () => {
           <img src="./arrow.png" alt="Seta para a direita" />
         </Link>
       </div>
-        <ProductsList limite={8} />
+        <ProductsList limite={8} route={'/products/product/:id'}/>
       </section>
      );
 }

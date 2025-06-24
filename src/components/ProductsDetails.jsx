@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import images from '../assets/images'
 import { useState } from 'react';
 
-const Produtes = () => {
+const ProductsDetails = () => {
 
     const [selecionar, setSelecionar] = useState(41)
     const [selecionarCor, setSelecionarCor] = useState('red')
@@ -214,4 +214,4 @@ const colors = [
     </> );
 }
  
-export default Produtes;
+export default ProductsDetails;

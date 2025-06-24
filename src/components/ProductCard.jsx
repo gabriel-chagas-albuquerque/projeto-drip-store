@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const ProductCard = ({image, category, title, priceBefore, price}) => {
+const ProductCard = ({image, category, title, priceBefore, price, route}) => {
     return ( 
-        <Link to={'product/:id'}>
+        <Link to= {route}>
             <div className="w-[163px] md:w-[292px]">
                <img src={image} alt="Imagem produto" className="mb-[11px]" />
                <h5 className="capitalize text-xs text-[#8F8F8F] lg:text-lg">{category}</h5>

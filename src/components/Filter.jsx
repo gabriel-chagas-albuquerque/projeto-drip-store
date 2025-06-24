@@ -1,6 +1,6 @@
 import { useState } from "react";
 let cor = '#db2777'
-export default function Resposivo() {
+export default function Filter() {
     const [menuFilter, setMenuFilter] = useState(false)
 
     const opeFilter = () => {
@@ -103,7 +103,7 @@ setMenuFilter(false)
     
 
 return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="bg-gray-50">
         {/* mobile */}
         <div className="lg:hidden px-4 pt-4 pb-4 bg-gray-50">
             <div className="flex gap-3 items-center mb-4">

@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 
-const ProductsList = ({limite}) => {
+const ProductsList = ({limite, route}) => {
   const products = [
     {
       id: 1,
@@ -129,6 +129,7 @@ const ProductsList = ({limite}) => {
           return(
             <li key={id} className="flex">
               <ProductCard
+                route={route}
                 image={image}
                 category={category}
                 title={title}
@@ -141,6 +142,7 @@ const ProductsList = ({limite}) => {
           return (
             <li key={id} className="flex">
               <ProductCard
+                route={route}
                 image={image}
                 category={category}
                 title={title}
