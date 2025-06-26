@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
-import images from '../assets/images'
+import sapatos from '../assets/sapatos.jsx'
 import { useState } from 'react';
 
 const ProductsDetails = () => {
@@ -16,8 +16,8 @@ const colors = [
     { name: 'purple', class: 'bg-purple-500' }
   ]
 
-  const imageArray = Object.values(images)
-  const imagesKey = Object.keys(images)
+  const imageArray = Object.values(sapatos)
+  const sapatosKey = Object.keys(sapatos)
 
   const proxImage = () => {
     setCarrinhoSapato((prox) => (prox + 1) % imageArray.length)
@@ -53,7 +53,7 @@ const colors = [
               >
                 <img 
                   src={thumb} 
-                  alt={`Thumbnail ${imagesKey[index]}`}
+                  alt={`Thumbnail ${sapatosKey[index]}`}
                   className="w-full h-full object-cover"
                 />
               </button>
@@ -142,7 +142,7 @@ const colors = [
                                    key={index} onClick={() => setCarrinhoSapato(index)} className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
                                     carrinhoSapato === index ? 'border-purple-400' : 'border-gray-200'
                                     }`}>
-                                    <img src={thumb} alt={`Thumbnail ${imagesKey[index]}`}className="w-full h-full object-cover cursor-pointer"/></button>
+                                    <img src={thumb} alt={`Thumbnail ${sapatosKey[index]}`}className="w-full h-full object-cover cursor-pointer"/></button>
                                     ))}
                                 </div>
                             </div>

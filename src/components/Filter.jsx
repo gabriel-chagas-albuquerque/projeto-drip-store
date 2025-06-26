@@ -127,19 +127,19 @@ return (
         </div>
 
         {/* pc */}
-        <div className="hidden lg:block  px-6 py-4 border-gray-200">
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
-                <div className="text-gray-600 text-sm">
-                    <strong>resultados para "Tenis" </strong> - 389 produtos
-                </div>
-                <div className="w-64">
-                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500">
+        <div className="hidden lg:block px-6 py-4 border-gray-200 m-5">
+            <div className="max-w-7xl mx-auto flex flex-col gap-4">
+                <div className="w-64 ml-auto">
+                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 flex-shrink-0">
                         <option>Ordenar por: relevantes</option>
                         <option>Menor preço</option>
                         <option>Maior preço</option>
                         <option>Mais vendidos</option> 
                     </select>
                 </div>
+            <div className="text-gray-600 text-sm">
+            <strong>resultados para "Tenis" </strong> - 389 produtos
+              </div>
             </div>
             
         </div>
