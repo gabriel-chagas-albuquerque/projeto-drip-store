@@ -123,13 +123,14 @@ const ProductsList = ({limite, route}) => {
       price: 100,
     },
   ];
+  
   return (
       <ul className="flex justify-center flex-wrap gap-[9px] mb-[40px] mt-10 lg:mb-[120px] sm:gap-[24px]">
         {limite ? products.filter(({id}) => id <= limite).map(({id, image, category, title, priceBefore, price}) => {
           return(
             <li key={id} className="flex">
               <ProductCard
-                route={route}
+                route={`${route}/${products[id-1].id}`}
                 image={image}
                 category={category}
                 title={title}
@@ -142,7 +143,7 @@ const ProductsList = ({limite, route}) => {
           return (
             <li key={id} className="flex">
               <ProductCard
-                route={route}
+                route={`${route}/${products[id-1].id}`}
                 image={image}
                 category={category}
                 title={title}

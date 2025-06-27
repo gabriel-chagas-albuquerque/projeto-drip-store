@@ -1,7 +1,9 @@
 import ProductsDetails from "../components/ProductsDetails";
 
 const ProductDetails = () => {
-  return <ProductsDetails />;
+  return(
+    <ProductsDetails />
+  ) 
 };
 
 export default ProductDetails;

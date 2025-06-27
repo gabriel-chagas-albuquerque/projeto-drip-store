@@ -162,9 +162,11 @@ const colors = [
                        
                         <div className='mb-8'>
                             <div className='flex items-baseline gap-3'>
-                                <span className='text-4xl font-bold text-gray-900'>R$ 219</span>
-                                <span className='text-lg text-gray-600'>,00</span>
-                                <span className='text-lg text-gray-400'>R$ 299,00</span>
+                                <div className='font-bold'>
+                                  <span className='text-4xl text-gray-900'>R$ 219</span>
+                                  <span className='text-lg text-gray-600'>,00</span>
+                                </div>
+                                <span className='text-lg text-gray-400 line-through'>R$ 299,00</span>
                             </div>
                         </div>
                         <div className='mb-8'>
