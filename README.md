@@ -53,6 +53,13 @@ npm run dev
 Link do deploy Vercel:  
 [https://projeto-drip-store-alpha.vercel.app/](https://projeto-drip-store-alpha.vercel.app/)
 
+---
+
+## 🗃 Backend
+
+Link do repositório do Backend do projeto:  
+[Back-end](https://github.com/gabriel-chagas-albuquerque/drip-store-backend)
+
 ## 📎 Observações
 
 - Projeto realizado para fins de estudo e não representa uma loja real.
